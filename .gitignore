@@ -1,2 +1,3 @@
 app/bytes
 .DS_Store
+.env
