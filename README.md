@@ -21,8 +21,8 @@ A daily **data structures & algorithms** track runs alongside all phases.
 | # | Component | From scratch | Production equivalent | Status |
 |---|---|---|---|---|
 | F1 | Data representation | Byte-level inspection of integers, IEEE 754 floats, endianness, UTF-8 | JS `number`/`string`, PostgreSQL types | ✅ |
-| F2 | Memory & process | Stack, heap, pointers, file descriptors, `write` vs `fsync` | Garbage-collected runtimes, database commit path | |
-| F3 | Network & concurrency | Blocking socket server in C, data race between threads, mutex | `node:http`, database locks | |
+| F2 | Memory model | Stack vs heap, pointers; six ways to break memory: dangling pointer, stack overflow, leak, use-after-free, buffer overflow, double free | Garbage-collected runtimes, AddressSanitizer | ✅ |
+| F3 | Network & concurrency | Blocking socket server in C, data race between threads, mutex | `node:http`, database locks | ✅ |
 | F4 | Event loop | Non-blocking server in C on `kqueue` | Node.js / libuv | |
 
 ### D · Database
@@ -30,7 +30,7 @@ A daily **data structures & algorithms** track runs alongside all phases.
 | # | Component | From scratch | Production equivalent | Status |
 |---|---|---|---|---|
 | D1 | Relational modeling | | Entities, keys, constraints in PostgreSQL | |
-| D2 | Storage & durability | Append-only log with crash recovery | Pages, WAL, `fsync` | |
+| D2 | Storage & durability | `write` vs `fsync` measured; append-only log with crash recovery | Pages, WAL, `fsync` | |
 | D3 | Indexing & query plans | Full scan | B-tree, join strategies, N+1, `EXPLAIN ANALYZE` on 1M rows | |
 | D4 | Transactions | Lost update and double booking across two sessions | MVCC, isolation levels, write skew, deadlocks, `SELECT … FOR UPDATE` | |
 | D5 | Money & time | Float rounding errors | `NUMERIC`, `TIMESTAMPTZ`, append-only ledger, snapshots | |
