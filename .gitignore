@@ -1,3 +1,5 @@
-app/bytes
+# Chương trình đã biên dịch (file không có đuôi) trong app/
+app/*
+!app/*.*
 .DS_Store
 .env
