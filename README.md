@@ -23,7 +23,7 @@ A daily **data structures & algorithms** track runs alongside all phases.
 | F1 | Data representation | Byte-level inspection of integers, IEEE 754 floats, endianness, UTF-8 | JS `number`/`string`, PostgreSQL types | ✅ |
 | F2 | Memory model | Stack vs heap, pointers; six ways to break memory: dangling pointer, stack overflow, leak, use-after-free, buffer overflow, double free | Garbage-collected runtimes, AddressSanitizer | ✅ |
 | F3 | Network & concurrency | Blocking socket server in C, data race between threads, mutex | `node:http`, database locks | ✅ |
-| F4 | Event loop | Non-blocking server in C on `kqueue` | Node.js / libuv | |
+| F4 | Event loop | Non-blocking server in C on `kqueue` | Node.js / libuv | ✅ |
 
 ### D · Database
 
@@ -52,7 +52,7 @@ A daily **data structures & algorithms** track runs alongside all phases.
 
 | # | Component | Focus | Status |
 |---|---|---|---|
-| L1 | Node.js runtime | Event loop phases, microtasks vs macrotasks, streams & backpressure, `worker_threads`, GC and memory leaks | |
+| L1 | Node.js runtime & V8 | V8 pipeline (parser → Ignition bytecode → Maglev/TurboFan JIT), deoptimization, hidden classes & inline caches, generational GC and pauses; event loop phases, microtasks vs macrotasks, streams & backpressure, `worker_threads`, memory leaks and heap snapshots | |
 | L2 | TypeScript | Structural typing, generics, narrowing, `unknown` vs `any`, type erasure and runtime validation | |
 | L3 | Software design & frameworks | Coupling and cohesion, OOP vs FP, SOLID, composition over inheritance; NestJS (dependency injection, modules, request lifecycle), React (rendering, reconciliation, hooks) | |
 
